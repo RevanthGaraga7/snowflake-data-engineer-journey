@@ -1,118 +1,143 @@
-# snowflake-data-engineer-journey
-snowpro-associate-certification-labs
-# 🏆 Snowflake Data Engineer Journey
+# ❄️ Snowflake Data Engineer Journey
 
-# Snowflake Data Engineer Journey
+<div align="center">
 
-![Snowflake](https://img.shields.io/badge/Snowflake-Certified-29B5E8?style=flat-square&logo=snowflake)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)
-![Labs](https://img.shields.io/badge/Labs-9%2F9-blue?style=flat-square)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
----
+![Certification](https://img.shields.io/badge/SnowPro%20Associate-Platform%20Certified-brightgreen?style=flat-square)
+![Labs](https://img.shields.io/badge/Labs%20Completed-9%20%2F%209-blue?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
-## 📌 About
-
-This repository contains my completed work from **Snowflake Ascent: Platform Training** and proof of my **SnowPro Associate: Platform** certification.
-
-I completed 9 hands-on labs covering everything from basic database operations to advanced Snowflake Cortex AI functions.
+</div>
 
 ---
 
-## 🎓 Certifications
+## 👋 About This Repository
 
-| Certification | Issuer | Date |
-|:---|:---|:---|
-| SnowPro Associate: Platform | Snowflake | May 2026 |
-| Ascent: Snowflake Platform Training | Snowflake | April 2026 |
+This repository documents my complete journey through **Snowflake Ascent: Platform Training** — from zero to certified.
 
-*Certificates are available in the `/certificates` folder.*
+I completed **9 hands-on labs**, attended virtual workshops, and earned two official Snowflake credentials:
+
+- 🏅 **SnowPro Associate: Platform** — Snowflake's industry-recognized certification
+- 🎓 **Ascent: Snowflake Platform Training** — Official training completion certificate
+
+Everything here reflects real, working code written and tested inside Snowflake Notebooks.
 
 ---
 
-## 📚 Labs Completed
+## 🎓 Certifications Earned
 
-| # | Lab | Key Topics |
-|:---|:---|:---|
-| 01 | Interacting with Snowflake | Snowsight UI, Notebooks, SQL/Python cells |
-| 02 | Identity and Access | Roles, privileges, database ownership |
+| Certification | Issuing Body | Date | Valid Until |
+|---|---|---|---|
+| SnowPro Associate: Platform | Snowflake | May 2026 | May 2028 |
+| Ascent: Snowflake Platform Training | Snowflake | May 2026 | No Expiry |
+
+> 📄 Certificate PDFs are available in the [`/certificates`](./certificates/) folder.
+
+---
+
+## 📚 Labs Completed (9 / 9)
+
+| # | Lab Title | Key Concepts |
+|---|---|---|
+| 01 | Interacting with Snowflake | Snowsight UI, Notebooks, SQL & Python cells |
+| 02 | Identity and Access | Roles, privileges, database creation, ownership |
 | 03 | Database Object Hierarchy | SHOW commands, INFORMATION_SCHEMA |
-| 04 | Tables, Data Types, Loading | CREATE TABLE, INSERT, EXCLUDE, REPLACE, RENAME, ILIKE |
-| 05 | Warehouses and Context | Virtual warehouses, scaling up/down/out/in |
+| 04 | Tables, Data Types & Loading | CREATE TABLE, INSERT, RENAME, ILIKE, LIMIT |
+| 05 | Warehouses and Context | Virtual warehouses, auto-suspend, scaling |
 | 06 | Load Wizard & Marketplace | COPY INTO, zero-copy cloning, data sharing |
-| 07 | Check Your Code | Query history, Time Travel, metadata |
-| 08 | Stages & Semi-Structured Data | Stages, VARIANT, JSON parsing with `:` syntax |
+| 07 | Check Your Code | Query history, Time Travel, metadata queries |
+| 08 | Stages & Semi-Structured Data | Stages, VARIANT type, JSON parsing with `:` |
 | 09 | Unstructured Data & Cortex LLM | PARSE_DOCUMENT, CLASSIFY_TEXT, TRANSLATE, SUMMARIZE, COMPLETE |
 
 ---
 
-## 🛠️ Skills Demonstrated
+## 🛠️ Technical Skills Demonstrated
 
-### Snowflake Core
-- Virtual Warehouses (XSMALL to 4XLARGE)
-- Zero-copy cloning
-- Time Travel with `BEFORE(STATEMENT => $query_id)`
-- External stages (S3 bucket integration)
+### ❄️ Snowflake Core
+- Virtual Warehouses (XSMALL → 4XLARGE), auto-suspend & resume
+- **Time Travel** — query historical data using `BEFORE(STATEMENT => $query_id)`
+- **Zero-copy cloning** — instant table/schema backups
+- External stages pointing to S3 (`s3://uni-lab-files`)
+- Directory tables for file-level metadata
 
-### Semi-Structured Data
-- `VARIANT` data type for JSON storage
-- JSON extraction using `column:key::datatype`
+### 📦 Data Loading
+- `COPY INTO` for bulk data ingestion
+- File formats: CSV, TSV, JSON, Parquet
+- Internal and external stage management
 
-### Snowflake Cortex AI
-- `PARSE_DOCUMENT` - Extract text from PDFs with OCR
-- `CLASSIFY_TEXT` - Automatic text categorization
-- `TRANSLATE` - Language translation
-- `SUMMARIZE` - Text summarization
-- `COMPLETE` - LLM text generation (RAG pattern)
+### 🗂️ Semi-Structured Data
+- `VARIANT` data type for storing raw JSON
+- JSON key extraction: `column:key::datatype` syntax
+- Flattening nested JSON structures
 
-### Data Loading
-- `COPY INTO` for bulk data loading
-- File formats: CSV, TSV, JSON
-- Stage management (internal and external)
+### 🤖 Snowflake Cortex AI
+| Function | Purpose |
+|---|---|
+| `PARSE_DOCUMENT()` | Extract text from PDFs using OCR |
+| `CLASSIFY_TEXT()` | Auto-categorize text into labels |
+| `TRANSLATE()` | Translate between languages (e.g., EN ↔ ES) |
+| `SUMMARIZE()` | Generate summaries from long text |
+| `COMPLETE()` | Run LLM prompts / build RAG pipelines |
 
 ---
 
 ## 📂 Repository Structure
 
-
+```
+snowflake-data-engineer-journey/
+│
+├── README.md
+│
+├── labs/
+│   ├── ob_lab_1_interacting_with_snowflake.ipynb
+│   ├── ob_lab_2_identity_and_access.ipynb
+│   ├── ob_lab_3_database_object_hierarchy.ipynb
+│   ├── ob_lab_4_tables_datatypes_loading_data.ipynb
+│   ├── ob_lab_5_warehouses_and_context.ipynb
+│   ├── ob_lab_6_load_wizard_marketplace.ipynb
+│   ├── ob_lab_7_check_your_code.ipynb
+│   ├── ob_lab_8_stages_and_semi_structured_data.ipynb
+│   └── ob_lab_9_unstructured_data_cortex_llm_functions.ipynb
+│
+├── certificates/
+│   ├── clmsCertificate.pdf
+│   └── SnowPro_Associate_Platform.pdf
+│
+└── Screenshots/
+    
+```
 
 ---
 
-## 🚀 How to Use This Repository
+## 🚀 How to Explore
 
-1. **View the labs** - Each `.ipynb` file contains completed code with explanations
-2. **Review certificates** - Check `/certificates` folder for official credentials
-3. **Import to Snowflake** - Notebooks can be imported into any Snowflake account
-
----
-
-## 📈 SnowPro Associate Exam Details
-
-| Detail | Information |
-|:---|:---|
-| Passing Score | 750/1000 |
-| Question Format | 65 multiple choice/select |
-| Time Limit | 85 minutes |
-| Key Domains | Data Loading (40%), Architecture (35%), Security (15%), Data Protection (10%) |
+1. **Browse the labs** — Each `.ipynb` file has completed SQL/Python code with markdown explanations
+2. **Check the certificates** — `/certificates` folder holds both official PDFs
 
 ---
 
 ## 📅 Timeline
 
 | Milestone | Date |
-|:---|:---|
-| Account Created | April 7, 2026 |
-| Completed All Labs | April, 2026 |
+|---|---|
+| Snowflake Account Created | April 7, 2026 |
+| Completed All 9 Labs | April 2026 |
 | Earned Ascent Certificate | April 2026 |
-| Passed SnowPro Associate | May 2026 |
+| Passed SnowPro Associate Exam | May 2026 |
 
 ---
 
 ## 📬 Connect With Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/garagasravanrevanth)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RevanthGaraga7)
 
 ---
 
-## ⭐ Support
+<div align="center">
+  <sub>⭐ If this helped you, consider giving the repo a star!</sub>
+</div>
 
-If you found this repository helpful, please give it a star!
